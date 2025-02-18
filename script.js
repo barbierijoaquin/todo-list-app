@@ -1,3 +1,18 @@
+class Task {
+    constructor(name, priority, category, startDate, endDate) {
+        this.name = name;
+        this.priority = priority;
+        this.category = category;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.completed = false;
+    }
+
+    toggleCompleted() {
+        this.completed = !this.completed;
+    }
+}
+
 // Evento para agregar tarea
 document.getElementById("add-task-btn").addEventListener("click", function () {
     const taskName = document.getElementById("task-name").value;
@@ -20,7 +35,7 @@ document.getElementById("confirm-task-btn").addEventListener("click", function (
     const startDate = document.getElementById("start-date").value;
     const endDate = document.getElementById("end-date").value;
 
-    const newTask = new Task(name, priority, category, startDate, endDate);
+    const newTask = new Task(name, priority, category, startDate, endDate); // "new Task"
     addTaskToUI(newTask);
     saveTasks();
     document.querySelector(".task-options").style.display = "none";
