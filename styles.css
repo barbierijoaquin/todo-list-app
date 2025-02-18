@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff11155;
+}
+
+header h1{
+    text-align: center;
+    color: black;
+    font-size: 4rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.task-form {
+    text-align: center;
+    width: 60%;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    padding: 0.5rem;
+    background-color: #09122C; /* Fondo claro para diferenciar */
+    border-radius: 1rem;
+}
+
+.task-form .new-task input{
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.task-form .new-task input::placeholder {
+    color: black;
+    opacity: 0.2;  /* Asegura que no sea transparente */
+    text-align: center;
+}
+
+.task-form .new-task input:hover{
+    color: #09122C;
+}
+
+.task-form .new-task button{
+    font-weight: bold;
+    color: #09122C;
+    align-items: center;
+    background-color: #FFF;
+    border: 2px solid #FFF;
+    border-radius: 2rem;
+    margin: 0.5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-form .new-task button:hover {
+    background-color: black;
+    color: yellow;
+}
+
+.task-form .task-options {
+    margin-top: 20px; 
+    display: none; /* Esto oculta el formulario inicialmente */
+    align-items: center;
+    color: #FFEFC8;
+    gap: 10px;  
+    font-size: 1.5rem;
+    flex-direction: column; /* Alinea las opciones una debajo de la otra */
+}
+
+.task-form .task-options button{
+    padding: 5px;
+    font-weight: bold;
+    color: #09122C;
+    align-items: center;
+    background-color: #FFF;
+    border: 2px solid #FFF;
+    border-radius: 2rem;
+    margin: 0.5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-form .task-options button:hover{
+    background-color: black;
+    color: yellow;
+}
+
+/* Estilo para los botones de ordenamiento */
+#sort-by-priority,
+#sort-by-category,
+#sort-by-date {
+    padding: 10px;
+    background-color: yellow;
+    border: 2px solid black;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sort-by-priority:hover,
+#sort-by-category:hover,
+#sort-by-date:hover {
+    background-color: black;
+    color: yellow;
+    border: 2px solid #FFF;
+}
+
+.task-list-container {
+    margin-top: 20px;
+    padding: 10px;
+    min-height: 50px;
+    background-color: black;
+    border-radius: 8px;
+    text-decoration: #FF0000;
+}
+
+.task-list-container .task-list{
+    font-size: 1.5rem;
+    text-align: left;
+    list-style: none;
+}
+
+.task-list-container .task-list li{
+    display: flex;
+    background-color: #FFEFC8;
+    margin: 10px 0; /* Espacio entre tareas */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera para resaltar */
+    border: 1px solid #fff; /* Borde sutil */
+}
+
+.task-list-container .task-list li p{
+    margin: 0; /* Evita márgenes adicionales */
+    flex-grow: 1; /* Hace que el texto ocupe todo el espacio disponible */
+    text-align: left;
+}
+
+.task-list-container .task-list .task-list li .complete-btn {
+    margin-left: 10px; /* Separa el botón del texto */
+}
+
+.task-details-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: none;
+}
+
+.task-details-panel h2 {
+    margin-bottom: 10px;
+}
+
+.task-details-panel p {
+    margin: 5px 0;
+}
+
+.task-details-panel button {
+    margin-top: 20px;
+}
+
+/* Estilo para los botones, en caso de que quieras un espacio específico */
+button {
+    margin-top: 10px; /* Ajusta este valor según el espacio que quieras */
+}
